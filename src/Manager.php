@@ -13,14 +13,14 @@
 namespace Phalcon\Ext\Mailer;
 
 use Phalcon\Config;
-use Phalcon\Mvc\User\Component;
+use Phalcon\Di\Injectable;
 use Phalcon\Mvc\View;
 use Phalcon\DiInterface;
 
 /**
  * Class Manager
  */
-class Manager extends Component
+class Manager extends Injectable
 {
     const AUTHENTICATION_MODE_CRAM_MD5  = 'CRAM-MD5';
     const AUTHENTICATION_MODE_LOGIN     = 'LOGIN';
@@ -398,7 +398,7 @@ class Manager extends Component
      *
      * @return \Phalcon\DiInterface
      */
-    public function getDI()
+    public function getDI(): \Phalcon\Di\DiInterface
     {
         if (!($di = parent::getDI()) && !($di instanceof DiInterface)) {
             throw new \RuntimeException('A dependency injection object is required to access internal services');
