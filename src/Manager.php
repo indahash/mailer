@@ -14,13 +14,14 @@ namespace Phalcon\Ext\Mailer;
 
 use Phalcon\Config;
 use Phalcon\Di\Injectable;
+use Phalcon\Events\EventsAwareInterface;
 use Phalcon\Mvc\View;
 use Phalcon\DiInterface;
 
 /**
  * Class Manager
  */
-class Manager extends Injectable
+class Manager extends Injectable implements EventsAwareInterface
 {
     const AUTHENTICATION_MODE_CRAM_MD5  = 'CRAM-MD5';
     const AUTHENTICATION_MODE_LOGIN     = 'LOGIN';
