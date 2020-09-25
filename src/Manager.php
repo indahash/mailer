@@ -15,6 +15,7 @@ namespace Phalcon\Ext\Mailer;
 use Phalcon\Config;
 use Phalcon\Di\Injectable;
 use Phalcon\Events\EventsAwareInterface;
+use Phalcon\Events\ManagerInterface;
 use Phalcon\Mvc\View;
 use Phalcon\DiInterface;
 
