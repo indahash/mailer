@@ -52,6 +52,11 @@ class Manager extends Injectable implements EventsAwareInterface
      * @var \Phalcon\Mvc\View\Simple
      */
     protected $view;
+    
+    /**
+     * @var ManagerInterface
+     */
+    protected $eventsManager;
 
     /**
      * Create a new MailerManager component using $config for configuring
@@ -406,5 +411,15 @@ class Manager extends Injectable implements EventsAwareInterface
         }
 
         return $di;
+    }
+    
+    public function getEventsManager(): ?ManagerInterface
+    {
+        return $this->eventsManager;
+    }
+
+    public function setEventsManager(ManagerInterface $eventsManager): void
+    {
+        $this->eventsManager = $eventsManager;
     }
 }
