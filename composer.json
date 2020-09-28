@@ -1,5 +1,5 @@
 {
-    "name": "zewlak-phalcon-ext/mailer",
+    "name": "phalcon-ext/mailer",
     "type": "library",
     "description": "Mailer component as wrapper over SwiftMailer for Phalcon.",
     "keywords": ["mailer", "phalcon", "phalcon-ext", "phalcon-mailer"],
